@@ -47,6 +47,7 @@ class Verifyer(commands.Cog):
     @commands.guild_only()
     @commands.command()
     async def verify(self, ctx, member: Optional[discord.Member]):
+        """Prove you aren't a robot."""
         if not member:
             member = ctx.author
         try:
