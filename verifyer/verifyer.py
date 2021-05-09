@@ -80,20 +80,20 @@ class Verifyer(commands.Cog):
     @commands.group()
     @checks.admin()
     async def verifyerset(self, ctx):
-        """Settings for verifyer"""
+        """Settings for verifyer."""
         pass
 
     @commands.guild_only()
     @verifyerset.command()
     async def enable(self, ctx):
-        """Enable verifyer.\nThis is per guild."""
+        """Enable verifyer in this guild."""
         await self.config.guild(ctx.guild).enabled.set(True)
         await ctx.send(_("Verifyer enabled."))
 
     @commands.guild_only()
     @verifyerset.command()
     async def disable(self, ctx):
-        """Disable verifyer.\nThis is per guild."""
+        """Disable verifyer in this guild."""
         await self.config.guild(ctx.guild).enabled.set(False)
         await ctx.send(_("Verifyer disabled."))
 
