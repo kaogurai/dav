@@ -76,7 +76,7 @@ class Ticketer(commands.Cog):
 
     @category.group()
     async def closed(self, ctx, *, category: discord.CategoryChannel):
-        """Set the category for open tickets."""
+        """Set the category for closed tickets."""
         await self.config.guild(ctx.guild).closed_category.set(category.id)
         await ctx.send(f"Category for closed tickets has been set to {category.mention}")
 
@@ -372,7 +372,7 @@ class Ticketer(commands.Cog):
 
 
 class SafeMember:
-    """Thank you kenny https://github.com/kennnyshiwa/kennnyshiwa-cogs"""
+    """Thank you flame & kenny. I first found this here: https://github.com/kennnyshiwa/kennnyshiwa-cogs"""
 
     def __init__(self, member: discord.Member):
         self.name = member.name
