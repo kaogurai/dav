@@ -78,7 +78,7 @@ class Verifyer(commands.Cog):
 
     @commands.guild_only()
     @commands.group()
-    @checks.admin()
+    @commands.admin_or_permissions(manage_guild=True)
     async def verifyerset(self, ctx):
         """Settings for verifyer."""
         pass
