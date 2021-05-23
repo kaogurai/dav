@@ -113,7 +113,7 @@ class Roomer(commands.Cog):
 
     # endregion listeners
 
-    @commands.admin()
+    @commands.admin_or_permissions(manage_channels=True)
     @commands.guild_only()
     @commands.group()
     async def roomer(self, ctx):
