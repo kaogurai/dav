@@ -213,7 +213,7 @@ class NickNamer(commands.Cog):
             await ctx.send(_("Missing permissions."))
 
     @checks.mod_or_permissions(manage_nicknames=True)
-    @commands.command(aliases=['freeze])
+    @commands.command(aliases=['freeze'])
     @checks.bot_has_permissions(manage_nicknames=True)
     async def freezenick(
         self,
