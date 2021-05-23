@@ -175,9 +175,9 @@ class NickNamer(commands.Cog):
             )  # can remove this as the check is made on invoke with the decorator
 
     @checks.mod_or_permissions(manage_nicknames=True)
-    @commands.command()
+    @commands.command(aliases=['cnick','setnick', 'nickname'])
     @checks.bot_has_permissions(manage_nicknames=True)
-    async def cnick(self, ctx, user: discord.Member, nickname: str, *, reason: Optional[str]):
+    async def rename(self, ctx, user: discord.Member, nickname: str, *, reason: Optional[str]):
         """Forcibly change a user's nickname."""
         valid_nick_check = self.valid_nickname(nickname=nickname)
         if not valid_nick_check:
